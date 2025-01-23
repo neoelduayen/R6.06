@@ -1,0 +1,28 @@
+1.
+
+age -> driverAge
+years -> age
+
+Renommer les membres de Voiture
+accelerer() -> accelerate()
+ralentir() -> slowDown()
+arreterVoiture -> stopCar()
+getVitesse() -> getSpeed()
+modele -> model
+couleur -> color
+vitesse -> speed
+
+Suppression des nombres magiques = extraction de constantes
+- Remplacer le nombre magique 120 par la constante MAX_SPEED dans la classe Car.
+- Remplacer le nombre 10 par la constante STANDARD_INCREMENT dans la classe Car
+- Remplacer le nombre 18 par la constante ADULT_AGE dans la classe Driver
+
+Extraction de méthode printDetails() dans la classe Car -> Méthode privée
+
+Migration de 3 méthodes de la classe Driver -> Car (changeSpeed(), startCar(), stopCar()). Du coup les méthodes qui avaient un paramètre (Car car) ont maintenant un paramètre (Driver driver)
+
+Mise en conformité des tests:
+- GIVEN WHEN THEN
+- nom des méthodes de test,
+- complétude
+- Nouveau : voir les méthodes startCar(), stopCar(), qui contiennent des assertions sur System.out.println(),
