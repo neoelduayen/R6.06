@@ -1,0 +1,36 @@
+TicketType : HALF_DAY, FULL_DAY, WEEK
+
+WEEK n'est jamais utilisé
+
+FeeCalculator.java :
+
+fonction calculate fee(visiteur, ticket)
+variable double fee
+
+si le visiteur a plus de 14 ans et ticket est de type HALF_DAY
+	le prix d'entrée de l'adulte est le prix de base * 0.6
+Si full day
+	le prix est à base * 1.2
+
+Si enfant half day
+	prix base * 0.2
+si enfant full day
+	prix base * 0.5
+
+
+Visitor.java :
+
+age
+constructor
+
+Main :
+Ne contient qu'un print
+
+Dans FeeCalculator, la fonction calculateFee comporte plusieurs problèmes :
+
+Beaucoup de répétitions de if qui pourraient être simplifiée,
+des nombres magiques notamment la comparaison avec l'age du visiteur pour déterminer si c'est un enfant ou un adulte,
+return peut être effectué directement
+
+Strategy Pattern que l'on peut implémenter
+
